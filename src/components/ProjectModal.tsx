@@ -13,7 +13,7 @@ export type ProjectType = {
   longDesc?: Translatable;
   pills: string[];
   images: string[];
-  link?: string;
+  link?: string | null;
 };
 
 interface ProjectModalProps {
