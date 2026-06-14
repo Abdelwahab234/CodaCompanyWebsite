@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Coda Company - Corporate Portfolio Website 🚀
 
-## Getting Started
+Welcome to the **Coda Company** repository! This is the official corporate landing page and portfolio for Coda Company, a leading software solutions and web development agency. 
 
-First, run the development server:
+The platform is designed with a premium, sleek dark-mode aesthetic and features interactive 3D elements, smooth scroll animations, and full bilingual support (Arabic & English).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌟 Live Demo
+*(You can add your Vercel or hosting link here once deployed)*
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **🌐 Bilingual (Arabic & English):** Fully integrated localization system seamlessly switching between RTL (Arabic) and LTR (English) layouts and content without page reloads.
+- **🧊 Interactive 3D Hero:** A stunning, interactive 3D particle node system in the hero section built with `Three.js` and `@react-three/fiber` that reacts to mouse movements and scroll.
+- **🎨 Premium Dark UI:** Crafted with Vanilla CSS and CSS variables for maximum performance, featuring glassmorphism, glowing gradients, and subtle micro-animations.
+- **📱 Fully Responsive:** Carefully tailored for optimal viewing on desktop, tablet, and mobile devices.
+- **🖼️ Interactive Portfolio:** A dynamic projects slider powered by `Swiper.js`, complete with a fully featured modal for viewing project details and image galleries.
+- **✨ Scroll Animations:** Scroll-triggered reveal animations powered by `AOS` (Animate On Scroll).
+- **📱 Direct Contact Integration:** A beautifully designed contact section featuring direct WhatsApp API integration.
 
-## Learn More
+## 🛠️ Technology Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
+- **Library:** [React](https://reactjs.org/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** Vanilla CSS (CSS Variables, Flexbox, CSS Grid)
+- **3D Graphics:** [Three.js](https://threejs.org/) & [@react-three/fiber](https://docs.pmnd.rs/react-three-fiber/)
+- **Animations:** [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/) & [Framer Motion](https://www.framer.com/motion/)
+- **Sliders/Carousels:** [Swiper.js](https://swiperjs.com/)
+- **Icons:** [Lucide-React](https://lucide.dev/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📂 Project Structure
 
-## Deploy on Vercel
+- `src/app/` - Next.js 14 App Router layout, pages, and global CSS.
+- `src/components/` - Reusable UI components (`Hero`, `Navbar`, `Projects`, `ProjectModal`, `Trust`, etc.).
+- `src/context/` - Global state management (e.g., `LanguageContext.tsx` for localization).
+- `src/locales/` - Translation dictionaries (`dictionary.ts` containing EN/AR text).
+- `public/` - Static assets, project images, and 3D models.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Getting Started
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/coda-company.git
+   cd coda-company
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+---
+
+## 📝 Arabic Description (نبذة بالعربية)
+
+**كودا كومباني** هو الموقع الرسمي والواجهة الرقمية لشركة كودا لتطوير البرمجيات. 
+تم بناء الموقع بأحدث التقنيات لتقديم تجربة مستخدم (UX) فائقة السلاسة، مع تصميم عصري داكن يعكس الاحترافية، ودعم كامل للغتين العربية والإنجليزية.
+
+يحتوي الموقع على قسم 3D تفاعلي، معرض أعمال ديناميكي متكامل، بالإضافة إلى أقسام الخدمات والضمانات التي تقدمها الشركة بطريقة مبتكرة وجذابة.
+
+---
+*Built with ❤️ by Coda Company Team*
