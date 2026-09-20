@@ -5,7 +5,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { ArrowRight, ArrowLeft } from "lucide-react";
+import { ArrowRight, ArrowLeft, Image as ImageIcon, ArrowUpRight } from "lucide-react";
 import ProjectModal, { ProjectType } from "./ProjectModal";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -65,7 +65,7 @@ const DUMMY_PROJECTS: ProjectType[] = [
       "/projects/masarat%20project/Screenshot%202026-06-09%20102025.png",
       "/projects/masarat%20project/Screenshot%202026-06-09%20102040.png"
     ],
-    "link": null
+    "link": "https://masaratgas.com"
   },
   {
     "id": 2,
@@ -82,8 +82,8 @@ const DUMMY_PROJECTS: ProjectType[] = [
       "en": "A comprehensive platform for hotel management and online booking, allowing custo..."
     },
     "longDesc": {
-      "ar": "منصة متكاملة لإدارة الفنادق والحجوزات الإلكترونية تتيح للعملاء استعراض الغرف، إجراء الحجوزات، رفع المستندات المطلوبة، وإتمام الدفع الإلكتروني بشكل آمن.\n\nالمميزات الرئيسية:\n\n• دعم اللغتين العربية والإنجليزية.\n• عرض الغرف مع الصور والأسعار والمميزات.\n• نظام حجز متكامل مع التحقق من التوفر وإدارة المواعيد.\n• احتساب رسوم إضافية تلقائياً حسب عدد النزلاء.\n• رفع جواز السفر أثناء الحجز.\n• الموافقة على الشروط والأحكام قبل تأكيد الحجز.\n• الدفع الإلكتروني عبر Visa وMastercard.\n• لوحة خاصة للعميل لإدارة الحجوزات ومتابعة حالتها.\n\nالتقنيات المستخدمة:\nNestJS - Node.js - TypeScript - GraphQL - PostgreSQL - WebSockets - Tailwind CSS",
-      "en": "A comprehensive platform for hotel management and online booking, allowing customers to browse rooms, make reservations, upload required documents, and securely complete online payments.\n\nKey Features:\n\n• Bilingual support (Arabic & English).\n• Room listings with images, prices, and amenities.\n• Integrated booking system with availability checks and scheduling.\n• Automatic calculation of extra fees based on guest count.\n• Passport upload during the booking process.\n• Acceptance of terms and conditions prior to reservation.\n• Secure online payments via Visa and Mastercard.\n• Dedicated customer dashboard to manage and track bookings.\n\nTechnologies Used:\nNestJS - Node.js - TypeScript - GraphQL - PostgreSQL - WebSockets - Tailwind CSS"
+      "ar": "منصة متكاملة لإدارة الفنادق والحجوزات الإلكترونية تتيح للعملاء استعراض الغرف، إجراء الحجوزات، رفع المستندات المطلوبة، وإتمام الدفع الإلكتروني بشكل آمن.\n\nالمميزات الرئيسية:\n\n• دعم اللغتين العربية والإنجليزية.\n• عرض الغرف مع الصور والأسعار والمميزات.\n• نظام حجز متكامل مع التحقق من التوفر وإدارة المواعيد.\n• احتساب رسوم إضافية تلقائياً حسب عدد النزلاء.\n• رفع جواز السفر أثناء الحجز.\n• الموافقة على الشروط والأحكام قبل تأكيد الحجز.\n• الدفع الإلكتروني عبر Visa وMastercard.\n• لوحة خاصة للعميل لإدارة الحجوزات ومتابعة حالتها.",
+      "en": "A comprehensive platform for hotel management and online booking, allowing customers to browse rooms, make reservations, upload required documents, and securely complete online payments.\n\nKey Features:\n\n• Bilingual support (Arabic & English).\n• Room listings with images, prices, and amenities.\n• Integrated booking system with availability checks and scheduling.\n• Automatic calculation of extra fees based on guest count.\n• Passport upload during the booking process.\n• Acceptance of terms and conditions prior to reservation.\n• Secure online payments via Visa and Mastercard.\n• Dedicated customer dashboard to manage and track bookings."
     },
     "pills": [
       "Next.js",
@@ -272,16 +272,17 @@ export default function Projects() {
         <div className="proj-carousel" data-aos="fade-up" data-aos-delay="200">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={30}
-            slidesPerView={1.2}
+            spaceBetween={24}
+            slidesPerView={1.15}
             navigation={{
               nextEl: '.swiper-next',
               prevEl: '.swiper-prev',
             }}
             breakpoints={{
-              640: { slidesPerView: 1.5 },
-              1024: { slidesPerView: 2.5 },
-              1400: { slidesPerView: 3.2 },
+              320: { slidesPerView: 1.15, spaceBetween: 16 },
+              640: { slidesPerView: 1.6, spaceBetween: 20 },
+              1024: { slidesPerView: 2.3, spaceBetween: 24 },
+              1400: { slidesPerView: 3.1, spaceBetween: 28 },
             }}
           >
             {DUMMY_PROJECTS.map((proj) => (
@@ -290,16 +291,34 @@ export default function Projects() {
                   className="proj-card" 
                   onClick={() => setSelectedProject(proj)}
                 >
-                  {proj.images.length > 0 && (
-                     <div className="proj-card-img-placeholder" style={{ background: `url('${proj.images[0]}') center/cover` }}></div>
-                  )}
-                  <div className="proj-card-content">
-                    <span className="proj-tag">{proj.tag[language]}</span>
-                    <div className="proj-name">{proj.name[language]}</div>
-                    <div className="proj-desc">{proj.desc[language]}</div>
+                  <div className="proj-card-media">
+                    {proj.images.length > 0 ? (
+                      <img 
+                        src={proj.images[0]} 
+                        alt={proj.name[language]} 
+                        className="proj-card-img" 
+                        loading="lazy" 
+                      />
+                    ) : (
+                      <div className="proj-card-img-placeholder" />
+                    )}
+                    <span className="proj-img-badge">
+                      <ImageIcon size={12} />
+                      <span>{proj.images.length}</span>
+                    </span>
+                    <span className="proj-tag-floating">{proj.tag[language]}</span>
                   </div>
-                  <div className="proj-hover-indicator">
-                    {t('projects.explore')}
+
+                  <div className="proj-card-content">
+                    <h3 className="proj-name">{proj.name[language]}</h3>
+                    <p className="proj-desc">{proj.desc[language]}</p>
+
+                    <div className="proj-card-action">
+                      <span className="proj-explore-link">
+                        {t('projects.explore')}
+                        <ArrowUpRight size={15} />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>

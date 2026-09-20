@@ -1,10 +1,23 @@
 "use client";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { useTheme } from "@/context/ThemeContext";
 
 export default function Hero3D() {
   const containerRef = useRef<HTMLDivElement>(null);
   const mouseRef = useRef({ x: 0, y: 0 });
+  const materialsRef = useRef<THREE.Material[]>([]);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    const isLight = theme === "light";
+    const newColor = new THREE.Color(isLight ? 0x8b5cf6 : 0x00e96a);
+    materialsRef.current.forEach((mat) => {
+      if ("color" in mat) {
+        (mat as any).color.copy(newColor);
+      }
+    });
+  }, [theme]);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -24,16 +37,16 @@ export default function Hero3D() {
     renderer.setClearColor(0x000000, 0);
     container.appendChild(renderer.domElement);
 
-    const green = new THREE.Color(0x00e96a);
-    const darkGreen = new THREE.Color(0x004d23);
+    const isLight = theme === "light";
+    const accentColor = new THREE.Color(isLight ? 0x8b5cf6 : 0x00e96a);
 
     // Main icosahedron wireframe
     const icoGeo = new THREE.IcosahedronGeometry(1.8, 1);
     const icoMat = new THREE.MeshBasicMaterial({
-      color: green,
+      color: accentColor,
       wireframe: true,
       transparent: true,
-      opacity: 0.35,
+      opacity: isLight ? 0.5 : 0.35,
     });
     const ico = new THREE.Mesh(icoGeo, icoMat);
     scene.add(ico);
@@ -41,10 +54,10 @@ export default function Hero3D() {
     // Inner icosahedron (smaller, rotates opposite)
     const innerGeo = new THREE.IcosahedronGeometry(1.0, 0);
     const innerMat = new THREE.MeshBasicMaterial({
-      color: green,
+      color: accentColor,
       wireframe: true,
       transparent: true,
-      opacity: 0.15,
+      opacity: isLight ? 0.3 : 0.15,
     });
     const inner = new THREE.Mesh(innerGeo, innerMat);
     scene.add(inner);
@@ -52,18 +65,23 @@ export default function Hero3D() {
     // Outer ring
     const ringGeo = new THREE.TorusGeometry(2.5, 0.01, 16, 100);
     const ringMat = new THREE.MeshBasicMaterial({
-      color: green,
+      color: accentColor,
       transparent: true,
-      opacity: 0.2,
+      opacity: isLight ? 0.35 : 0.2,
     });
     const ring = new THREE.Mesh(ringGeo, ringMat);
     ring.rotation.x = Math.PI / 2;
     scene.add(ring);
 
     // Second ring (tilted)
+    const ring2Mat = new THREE.MeshBasicMaterial({ 
+      color: accentColor, 
+      transparent: true, 
+      opacity: isLight ? 0.25 : 0.12 
+    });
     const ring2 = new THREE.Mesh(
       new THREE.TorusGeometry(2.2, 0.01, 16, 80),
-      new THREE.MeshBasicMaterial({ color: green, transparent: true, opacity: 0.12 })
+      ring2Mat
     );
     ring2.rotation.x = Math.PI / 3;
     ring2.rotation.y = Math.PI / 4;
@@ -80,10 +98,10 @@ export default function Hero3D() {
     }
     particleGeo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
     const particleMat = new THREE.PointsMaterial({
-      color: green,
-      size: 0.03,
+      color: accentColor,
+      size: 0.035,
       transparent: true,
-      opacity: 0.6,
+      opacity: isLight ? 0.75 : 0.6,
     });
     const particles = new THREE.Points(particleGeo, particleMat);
     scene.add(particles);
@@ -91,12 +109,14 @@ export default function Hero3D() {
     // Glow sphere (subtle center glow)
     const glowGeo = new THREE.SphereGeometry(0.6, 32, 32);
     const glowMat = new THREE.MeshBasicMaterial({
-      color: green,
+      color: accentColor,
       transparent: true,
-      opacity: 0.04,
+      opacity: 0.05,
     });
     const glow = new THREE.Mesh(glowGeo, glowMat);
     scene.add(glow);
+
+    materialsRef.current = [icoMat, innerMat, ringMat, ring2Mat, particleMat, glowMat];
 
     // Mouse tracking
     const handleMouseMove = (e: MouseEvent) => {

@@ -7,6 +7,9 @@ export const dictionary = {
       whyUs: "لماذا نحن؟",
       trust: "الضمانات",
       contact: "تواصل معنا",
+      contracts: "باقات التعاقد",
+      themeLight: "الوضع الفاتح",
+      themeDark: "الوضع الداكن",
     },
     hero: {
       badge: "نحو مستقبل رقمي أفضل",
@@ -20,6 +23,130 @@ export const dictionary = {
       desc: "نحن في كودا كومباني لا نكتب مجرد أكواد، بل نبني حلولاً برمجية متكاملة تنمو مع أعمالك وتترك أثراً حقيقياً.",
       primaryBtn: "ابدأ مشروعك الآن",
       secondaryBtn: "اكتشف أعمالنا",
+    },
+    contracts: {
+      badge: "نماذج التعاقد والعمل",
+      title1: "باقات برمجية مرنة",
+      title2: "تواكب مرحلة نموك",
+      desc: "نقدم نماذج تعاقد هندسية واضحة تمنحك الشفافية الكاملة والقيمة الحقيقية، سواء كنت تبدأ فكرة من الصفر أو تدير منصة نشطة.",
+      showAll: "عرض كافة بنود ومزايا العقد",
+      hideDetails: "إخفاء التفاصيل",
+      choosePlan: "طلب هذه الباقة",
+      primaryAdvantage: "الميزة الأساسية",
+      bestFor: "مناسب لـ",
+      comparisonTitle: "الفرق بين الباقات ببساطة",
+      tableHeaders: {
+        contract: "الباقة",
+        goal: "الهدف الرئيسي",
+        target: "لمن هذه الباقة؟"
+      },
+      packages: [
+        {
+          num: "01",
+          name: "Build",
+          tagline: "From Idea to Production",
+          arName: "عقد بناء المشروع المتكامل",
+          targetAudience: "صاحب فكرة أو مشروع جديد يريد إطلاقه كمنتج حقيقي في السوق",
+          mainBenefit: "العميل بيستلم مشروع كامل جاهز للتشغيل من الفكرة لحد الـ Production، بدل ما يتعامل مع مصمم ومبرمج وسيرفرات وشركات مختلفة.",
+          highlights: [
+            "دراسة كاملة للفكرة وخطة العمل التقنية",
+            "تصميم UI/UX متكامل وعصري للواجهات",
+            "تطوير Frontend و Backend و APIs",
+            "لوحة تحكم Admin Dashboard شاملة",
+            "دمج بوابات الدفع، الحماية، ونشر Production"
+          ],
+          allFeatures: [
+            "دراسة كاملة للفكرة واحتياجات السوق",
+            "تحليل المتطلبات وتحديد الـ Features بدقة",
+            "وضع الـ Business & Technical Plan وخطة التنفيذ",
+            "UI/UX Design كامل بأحدث المعايير العصرية",
+            "Frontend Development متجاوب وسريع",
+            "Backend Development & APIs عالية الكفاءة",
+            "Database Architecture وبناء قواعد بيانات قوية",
+            "لوحة تحكم Admin Dashboard شاملة لإدارة النظام",
+            "Authentication & User Management وإدارة الصلاحيات",
+            "دمج بوابات الدفع والخدمات الخارجية عند الحاجة",
+            "Testing & Quality Assurance وفحص جودة شامل",
+            "Security Hardening وحماية المشروع والبيانات",
+            "Performance Optimization وسرعة استجابة فائقة",
+            "إعداد الاستضافة والسيرفرات السحابية",
+            "حجز وربط الـ Domain وإعداد SSL والبنية الأساسية",
+            "Deployment وتشغيل المشروع Production بشكل حي",
+            "Documentation وتسليم كافة التوثيقات البرمجية",
+            "تدريب العميل أو فريقه على إدارة واستخدام النظام"
+          ]
+        },
+        {
+          num: "02",
+          name: "Care",
+          tagline: "Keep Your Product Secure & Performing",
+          arName: "عقد الصيانة والدعم التقني",
+          targetAudience: "من لديه مشروع أو منصة تعمل بالفعل ويريد استقراراً وأماناً مستمراً",
+          mainBenefit: "بدل ما تستنى المشكلة تحصل وبعدها تدور على مبرمج، بيكون عندك فريق هندسي متابع المشروع ومستقر على مدار الساعة.",
+          highlights: [
+            "مراقبة ومتابعة حالة المشروع على مدار الساعة 24/7",
+            "إصلاح الـ Bugs والمشاكل التقنية فور حدوثها",
+            "Security Updates وإغلاق الثغرات البرمجية",
+            "إدارة النسخ الاحتياطية (Backups) وقواعد البيانات",
+            "دعم فني مستمر ومراجعة دورية للكود والتقارير"
+          ],
+          allFeatures: [
+            "متابعة حالة المشروع وأدائه بشكل مستمر",
+            "إصلاح الـ Bugs والمشاكل التقنية الطارئة",
+            "تحديث Dependencies و Libraries البرمجية",
+            "Security Updates دورية وإغلاق الثغرات الأمنية",
+            "مراقبة أداء السيرفر والموقع وسرعة الاستجابة",
+            "تحسين سرعة الـ Website / Application الدائمة",
+            "Database Optimization وتحسين كفاءة الاستعلامات",
+            "Backup Management وإدارة النسخ الاحتياطي التلقائي",
+            "Monitoring وتتبع واستباق الأخطاء قبل حدوثها",
+            "معالجة ومتابعة مشاكل الـ Hosting والـ Deployment",
+            "تحسين الـ Stability والـ Reliability واستقرار النظام",
+            "مراجعة دورية للكود لضمان الالتزام بأفضل الممارسات",
+            "Technical Support ودعم فني واستجابة سريعة",
+            "تقارير دورية شاملة عن حالة واستقرار المشروع",
+            "اقتراح تحسينات تقنية عند اكتشاف فرص للتطوير"
+          ]
+        },
+        {
+          num: "03",
+          name: "Grow",
+          tagline: "Build, Maintain & Scale Your Product",
+          arName: "عقد التطوير المستمر + الصيانة",
+          popularBadge: "الباقة الأكثر شمولاً",
+          targetAudience: "شركة أو منصة نشطة تبحث عن فريق تقني كامل مسؤول عن نمو وتوسع منتجها",
+          mainBenefit: "العميل مش بيجيبنا بس عشان نصلح المشاكل، لكن بيكون عنده Technical Team مستمر مسؤول عن نمو وتوسع المنتج بالكامل.",
+          highlights: [
+            "كل خدمات الصيانة والأمان والاستقرار الفائق",
+            "إضافة ميزات وخصائص جديدة بشكل مستمر",
+            "تطوير تطبيقات الجوال وربط الأنظمة الخارجية",
+            "إعادة هيكلة الكود (Refactoring) لتحمل التوسع",
+            "أولوية قصوى ودعم مخصص حسب أعلى SLA"
+          ],
+          allFeatures: [
+            "كل خدمات الصيانة الشاملة، الرقابة، والأمان الفائق",
+            "إصلاح الـ Bugs والمشاكل بشكل فوري",
+            "Security Monitoring & Hardening استباقي",
+            "Performance Optimization متواصل للسيرفر والواجهات",
+            "Server & Infrastructure Management والبنية التحتية",
+            "Database Optimization وتوسيع قواعد البيانات",
+            "إضافة Features جديدة بناءً على متطلبات السوق",
+            "تطوير وتحسين الـ Existing Features الحالية",
+            "تطوير وتحسين الـ UI/UX وفق سلوك المستخدمين",
+            "تطوير Mobile App مكمل عند الحاجة",
+            "تطوير APIs و Integrations مع خدمات خارجية",
+            "ربط خدمات وحلول برمجية ومحاسبية وأنظمة طرف ثالث",
+            "تحسين الـ Architecture لدعم ملايين العمليات",
+            "Refactoring مستمر للكود القديم للحفاظ على حداثته",
+            "Automated Testing لضمان سلامة كل تحديث",
+            "إدارة خطوط الـ CI/CD & Deployment السريعة",
+            "Technical Documentation ومراجعة دورية للكود",
+            "Technical Consulting وجلسات استشارية تقنية أسبوعية",
+            "Roadmap واضحة لتطوير وتوسيع المنتج المستمر",
+            "أولوية عليا في الدعم وحل المشاكل حسب مستوى SLA معتمد"
+          ]
+        }
+      ]
     },
     services: {
       badge: "خدماتنا",
@@ -136,6 +263,9 @@ export const dictionary = {
       whyUs: "Why Us",
       trust: "Guarantees",
       contact: "Contact",
+      contracts: "Packages",
+      themeLight: "Light Mode",
+      themeDark: "Dark Mode",
     },
     hero: {
       badge: "Towards a Better Digital Future",
@@ -149,6 +279,129 @@ export const dictionary = {
       desc: "At Coda Kobani, we don't just write code; we build comprehensive software solutions that scale with your business and leave a real impact.",
       primaryBtn: "Start Your Project",
       secondaryBtn: "Explore Our Work",
+    },
+    contracts: {
+      badge: "Engagement Models",
+      title1: "Flexible Tech Contracts",
+      title2: "Tailored to Your Stage",
+      desc: "Transparent, engineering-grade packages designed to deliver real business value—whether you are launching from scratch or scaling an active product.",
+      showAll: "View All Deliverables",
+      hideDetails: "Hide Details",
+      choosePlan: "Select This Plan",
+      primaryAdvantage: "Key Advantage",
+      bestFor: "Best For",
+      comparisonTitle: "Comparison At A Glance",
+      tableHeaders: {
+        contract: "Package",
+        goal: "Core Objective",
+        target: "Who is it for?"
+      },
+      packages: [
+        {
+          num: "01",
+          name: "Build",
+          tagline: "From Idea to Production",
+          arName: "Full Project Development",
+          targetAudience: "Founders with a new idea or startup ready to launch a market-ready product",
+          mainBenefit: "You receive a complete, production-ready system from ideation to deployment under one roof—no juggling separate designers, developers, and server vendors.",
+          highlights: [
+            "Complete product discovery & technical planning",
+            "Modern end-to-end UI/UX design",
+            "Robust Frontend, Backend & API development",
+            "Comprehensive Admin Dashboard & payments",
+            "Automated QA, security hardening & production launch"
+          ],
+          allFeatures: [
+            "Full product discovery and market requirements study",
+            "Requirements analysis and feature specification",
+            "Business & technical execution planning",
+            "Complete modern UI/UX design system",
+            "High-performance responsive Frontend development",
+            "Scalable Backend development & REST/GraphQL APIs",
+            "Database architecture & schema modeling",
+            "Comprehensive Admin Dashboard for system management",
+            "Authentication, RBAC & user security management",
+            "Payment gateway & third-party API integration",
+            "End-to-end testing & Quality Assurance (QA)",
+            "Security hardening & data vulnerability defense",
+            "Performance optimization & sub-second loading speeds",
+            "Cloud hosting setup and server provisioning",
+            "Domain registration, DNS & SSL certificates",
+            "Zero-downtime live Production deployment",
+            "Complete code & system technical documentation",
+            "Handover training for your internal operations team"
+          ]
+        },
+        {
+          num: "02",
+          name: "Care",
+          tagline: "Keep Your Product Secure & Performing",
+          arName: "Maintenance & Proactive Support",
+          targetAudience: "Businesses with an active product who need 24/7 reliability, speed, and security",
+          mainBenefit: "Instead of waiting for a crash and scrambling for an available engineer, you have a dedicated engineering team proactively monitoring and tuning your product 24/7.",
+          highlights: [
+            "24/7 continuous health & uptime monitoring",
+            "Rapid bug fixing & emergency issue resolution",
+            "Regular security updates & dependency patches",
+            "Automated backup management & database tuning",
+            "Dedicated technical support with monthly performance reports"
+          ],
+          allFeatures: [
+            "Continuous 24/7 system health & uptime monitoring",
+            "Rapid bug resolution and production issue fixes",
+            "Dependency and package library vulnerability updates",
+            "Routine security patches and attack mitigation",
+            "Server CPU, RAM, and bandwidth consumption monitoring",
+            "Persistent website & application speed optimization",
+            "Database index optimization & query performance tuning",
+            "Automated multi-region backup management",
+            "Error tracking and proactive incident prevention",
+            "Cloud hosting, DNS, and deployment troubleshooting",
+            "System stability, resilience, and reliability auditing",
+            "Periodic code quality reviews & refactoring guidance",
+            "Direct engineering technical support channels",
+            "Detailed monthly system health & SLA reports",
+            "Proactive architectural recommendations for scalability"
+          ]
+        },
+        {
+          num: "03",
+          name: "Grow",
+          tagline: "Build, Maintain & Scale Your Product",
+          arName: "Continuous Growth & Maintenance",
+          popularBadge: "Most Comprehensive",
+          targetAudience: "Established companies looking for a full, ongoing technical team to drive product expansion",
+          mainBenefit: "You gain a dedicated, full-stack tech department that doesn't just fix bugs, but actively iterates, designs, and builds new features to scale your product.",
+          highlights: [
+            "All comprehensive Care maintenance & security services",
+            "Continuous new feature engineering & releases",
+            "Mobile app expansion, APIs & partner integrations",
+            "Code refactoring & infrastructure auto-scaling",
+            "Dedicated priority support with guaranteed SLA"
+          ],
+          allFeatures: [
+            "All comprehensive maintenance, uptime, and security services",
+            "Immediate high-priority bug and defect fixing",
+            "Proactive security monitoring and infrastructure hardening",
+            "Continuous frontend & backend performance tuning",
+            "Full server, cloud infrastructure & database management",
+            "Database scalability and high-throughput query handling",
+            "Rapid development and shipping of new product features",
+            "Iterative optimization of existing features based on analytics",
+            "Ongoing UI/UX enhancements and modern user flows",
+            "Companion Mobile App development (iOS & Android)",
+            "Custom API development and third-party integrations",
+            "System architecture evolution for enterprise scaling",
+            "Continuous code refactoring and legacy debt reduction",
+            "Automated testing suites and regression prevention",
+            "CI/CD pipeline management for daily safe deployments",
+            "Comprehensive technical architecture documentation",
+            "Weekly technical consulting and roadmap strategy sessions",
+            "Data-informed feature prioritization and roadmap planning",
+            "Top-tier priority response channels with strict SLA guarantees"
+          ]
+        }
+      ]
     },
     services: {
       badge: "Our Services",

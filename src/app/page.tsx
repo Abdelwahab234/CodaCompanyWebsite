@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Contracts from "@/components/Contracts";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
 import WhyUs from "@/components/WhyUs";
@@ -43,6 +44,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Contracts />
         <Services />
         <Projects />
         <WhyUs />
